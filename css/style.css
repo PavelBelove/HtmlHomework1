@@ -1,0 +1,374 @@
+@charset "UTF-8";
+/* Переменные, и, в особенности, миксины "притянуты за уши" исключительно в целях тренировки. Для этого макета без них было бы даже проще.*/
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  min-height: 323px;
+  padding: 0px 50px;
+  background-color: #425062;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 3.75em;
+  font-weight: 400;
+  text-align: left;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+header ul {
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: left;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+  list-style-image: url(../img/header_li.png);
+}
+header .header_img {
+  max-width: 469px;
+  max-height: 214px;
+}
+
+.about {
+  display: flex;
+}
+.about_article {
+  padding-left: 50px;
+}
+.about_article h2 {
+  font-family: Arial;
+  color: #445161;
+  font-size: 1.875em;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  text-align: left;
+}
+.about_article p {
+  margin-right: 90px;
+  font-family: Arial;
+  color: #333333;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+.about iframe {
+  margin: 50px;
+  min-width: 430px;
+  min-height: 245px;
+}
+
+.diginity {
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+}
+.diginity h2 {
+  font-family: Arial;
+  color: #445161;
+  font-size: 1.875em;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  flex-basis: 100%;
+}
+.diginity .wrapper {
+  display: flex;
+  padding-left: 50px;
+}
+.diginity ul {
+  margin-right: 90px;
+  font-family: Arial;
+  color: #333333;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  list-style: none;
+  padding: 0px;
+}
+.diginity li {
+  background: url(../img/ul_plus.png) no-repeat 0 5px;
+  padding: 0px 0px 36px 40px;
+}
+
+.scrinshots h2 {
+  font-family: Arial;
+  color: #445161;
+  font-size: 1.875em;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+}
+.scrinshots .wrapper {
+  display: flex;
+}
+.scrinshots figure {
+  display: flex;
+  align-content: flex-start;
+}
+.scrinshots figcaption {
+  padding-left: 15px;
+}
+.scrinshots img {
+  margin-top: 3px;
+  max-height: 150px;
+}
+.scrinshots h3 {
+  margin-top: 0px;
+  font-family: Arial;
+  color: #445161;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.scrinshots p {
+  margin-right: 90px;
+  font-family: Arial;
+  color: #333333;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  margin-right: 3px;
+}
+
+.reviews {
+  background-color: whitesmoke;
+  padding: 50px;
+}
+.reviews h2 {
+  font-family: Arial;
+  color: #445161;
+  font-size: 1.875em;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 0px;
+}
+.reviews .review {
+  display: flex;
+  margin: 10px;
+  margin-bottom: 24px;
+}
+.reviews .wrapper {
+  display: flex;
+}
+.reviews .avatar {
+  height: 75px;
+  min-width: 75px;
+  border-radius: 50%;
+  background-image: url(../img/fig_image.jpg);
+}
+.reviews .rev {
+  margin-left: 30px;
+  background-color: #ececec;
+  position: relative;
+  padding-left: 15px;
+}
+.reviews .rev::before {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 20px solid transparent;
+  border-right: 15px solid #ececec;
+  left: -35px;
+  top: 20px;
+}
+.reviews p {
+  font-family: Arial;
+  color: #333333;
+  font-size: 0.875em;
+  font-style: italic;
+  line-height: 1.286;
+  text-align: left;
+}
+.reviews span {
+  font-family: Arial;
+  color: #989898;
+  font-size: 0.875em;
+  font-weight: 400;
+  line-height: 1.286;
+  text-align: left;
+}
+
+.buy {
+  padding: 50px;
+}
+.buy h2 {
+  font-family: Arial;
+  color: #445161;
+  font-size: 1.875em;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 0px;
+}
+.buy .wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.buy .tariff {
+  background-color: #425062;
+  align-items: center;
+  max-width: 300px;
+  border-radius: 10px;
+  border: solid 2px #425062;
+  justify-self: center;
+}
+.buy h3 {
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+}
+.buy span {
+  display: block;
+  background-color: white;
+  height: 51px;
+  font-family: Arial;
+  color: #445162;
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 0.75;
+  text-align: center;
+  padding-top: 20px;
+  outline: solid 2px #425062;
+}
+.buy ol {
+  list-style-position: inside;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 0.875em;
+  font-weight: 400;
+  line-height: 1.714;
+  text-align: left;
+}
+.buy a {
+  display: inline-block;
+  padding: 14px 111px;
+  margin: 22px;
+  margin-top: 0px;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #445161;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+footer {
+  background-color: #425062;
+  padding: 50px 0px 0px 0px;
+  padding-bottom: 0px;
+}
+footer h2 {
+  font-family: Arial;
+  color: #445161;
+  font-size: 1.875em;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  color: white;
+  margin-top: 0px;
+}
+footer .wrapper {
+  display: flex;
+  justify-content: center;
+}
+footer input,
+footer textarea {
+  display: block;
+  width: 500px;
+  padding: 10px;
+  margin-bottom: 22px;
+  border-radius: 10px;
+}
+footer input::placeholder,
+footer textarea::placeholder {
+  font-family: Arial;
+  color: #445162;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+footer .btn {
+  border-radius: 5px;
+  background-color: #ffffff;
+  width: 140px;
+  height: 40px;
+  font-family: Arial;
+  color: #445162;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 190px;
+  border-radius: 10px;
+}
+footer .btn:hover {
+  background-color: whitesmoke;
+}
+footer span {
+  display: block;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  padding-left: 30px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+footer .skype {
+  background: url(../img/skype_icon.png) no-repeat;
+}
+footer .icq {
+  background: url(../img/skype_icon.png) no-repeat;
+}
+footer .mail {
+  background: url(../img/skype_icon.png) no-repeat;
+}
+footer .tel {
+  background: url(../img/skype_icon.png) no-repeat;
+}
+footer .social {
+  background: url(../img/social_buttons.png);
+  width: 240px;
+  height: 42px;
+  margin-left: 50px;
+}
+footer .copy {
+  display: block;
+  background-color: whitesmoke;
+  width: 100%;
+  margin: 0px;
+  margin-top: 30px;
+  padding: 0px;
+  font-family: Arial;
+  color: #445162;
+  font-size: 0.75em;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  line-height: 2;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,431 @@
+/* Переменные, и, в особенности, миксины "притянуты за уши" исключительно в целях тренировки. Для этого макета без них было бы даже проще.*/
+$container_width: 1280px;
+$gray_blue: rgb(66, 80, 98);
+$almost_black: rgb(51, 51, 51);
+$light_gray: rgb(245, 245, 245);
+
+@mixin h2_styles() {
+    font-family: Arial;
+    color: #445161;
+    font-size: 1.875em;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+}
+
+@mixin p_styles() {
+    margin-right: 90px;
+    font-family: Arial;
+    color: #333333;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.container {
+    max-width: $container_width;
+    margin: 0 auto;
+}
+
+header {
+
+    min-height: 323px;
+    padding: 0px 50px;
+    background-color: $gray_blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 3.75em;
+        font-weight: 400;
+        text-align: left;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    ul {
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 1.25em;
+        font-weight: 400;
+        line-height: 1.8;
+        text-align: left;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+        list-style-image: url(../img/header_li.png)
+    }
+
+    .header_img {
+
+
+        max-width: 469px;
+        max-height: 214px;
+    }
+
+
+}
+
+.about {
+    display: flex;
+
+    &_article {
+        padding-left: 50px;
+
+        h2 {
+            @include h2_styles();
+            text-align: left;
+        }
+
+        p {
+            @include p_styles();
+        }
+    }
+
+    iframe {
+        margin: 50px;
+
+        min-width: 430px;
+        min-height: 245px;
+    }
+
+}
+
+.diginity {
+    background-color: $light_gray;
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+        @include h2_styles();
+
+        flex-basis: 100%
+    }
+
+    .wrapper {
+        display: flex;
+        padding-left: 50px;
+        ;
+    }
+
+    ul {
+        @include p-styles();
+        list-style: none;
+        padding: 0px;
+
+    }
+
+    li {
+        background: url(../img/ul_plus.png) no-repeat 0 5px;
+        padding: 0px 0px 36px 40px;
+    }
+
+}
+
+.scrinshots {
+    h2 {
+        @include h2_styles();
+
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+
+
+    figure {
+        display: flex;
+        align-content: flex-start;
+    }
+
+    figcaption {
+        padding-left: 15px;
+    }
+
+    img {
+        margin-top: 3px;
+        max-height: 150px
+    }
+
+    h3 {
+        margin-top: 0px;
+        font-family: Arial;
+        color: #445161;
+        font-size: 1.5em;
+        font-weight: 400;
+        line-height: 1.25;
+
+    }
+
+    p {
+        @include p_styles();
+        margin-right: 3px;
+    }
+}
+
+.reviews {
+    background-color: $light_gray;
+    padding: 50px;
+
+    h2 {
+        @include h2_styles();
+        margin-top: 0px;
+
+    }
+
+    .review {
+        display: flex;
+        margin: 10px;
+        margin-bottom: 24px;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .avatar {
+        height: 75px;
+        min-width: 75px;
+
+
+
+        border-radius: 50%;
+        background-image: url(../img/fig_image.jpg);
+
+
+    }
+
+    .rev {
+
+        margin-left: 30px;
+        background-color: rgb(236, 236, 236);
+        position: relative;
+        padding-left: 15px;
+    }
+
+    .rev::before {
+        position: absolute;
+        content: '';
+        width: 0px;
+        height: 0px;
+        border: 20px solid transparent;
+        border-right: 15px solid rgb(236, 236, 236);
+        left: -35px;
+        top: 20px
+    }
+
+    p {
+        font-family: Arial;
+        color: #333333;
+        font-size: 0.875em;
+        font-style: italic;
+        line-height: 1.286;
+        text-align: left;
+    }
+
+    span {
+        font-family: Arial;
+        color: #989898;
+        font-size: 0.875em;
+        font-weight: 400;
+        line-height: 1.286;
+        text-align: left;
+
+    }
+}
+
+.buy {
+    padding: 50px;
+
+
+    h2 {
+        @include h2_styles();
+        margin-top: 0px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    .tariff {
+        background-color: $gray_blue;
+        align-items: center;
+        max-width: 300px;
+        border-radius: 10px;
+        border: solid 2px $gray_blue;
+        justify-self: center;
+
+    }
+
+    h3 {
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 1.5em;
+        font-weight: 400;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+
+    span {
+        display: block;
+
+        background-color: rgb(255, 255, 255);
+
+        height: 51px;
+        font-family: Arial;
+        color: #445162;
+        font-size: 2.5em;
+        font-weight: 400;
+        line-height: 0.75;
+        text-align: center;
+        padding-top: 20px;
+        outline: solid 2px $gray_blue;
+    }
+
+    ol {
+        list-style-position: inside;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 0.875em;
+        font-weight: 400;
+        line-height: 1.714;
+        text-align: left;
+
+    }
+
+
+
+    a {
+        display: inline-block;
+        padding: 14px 111px;
+        margin: 22px;
+        margin-top: 0px;
+        ;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 10px;
+        font-family: Arial;
+        color: #445161;
+        font-size: 1.125em;
+        font-weight: 700;
+        line-height: 1;
+
+    }
+}
+
+footer {
+    background-color: $gray_blue;
+    padding: 50px 0px 0px 0px;
+    padding-bottom: 0px;
+
+    h2 {
+        @include h2_styles();
+        color: rgb(255, 255, 255);
+        margin-top: 0px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    input,
+    textarea {
+        display: block;
+        width: 500px;
+        padding: 10px;
+        margin-bottom: 22px;
+        border-radius: 10px;
+
+        &::placeholder {
+            font-family: Arial;
+            color: #445162;
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: left;
+        }
+    }
+
+
+    .btn {
+        border-radius: 5px;
+        background-color: #ffffff;
+        width: 140px;
+        height: 40px;
+        font-family: Arial;
+        color: #445162;
+        font-size: 1em;
+        font-weight: 700;
+
+        text-transform: uppercase;
+        margin-left: 190px;
+        border-radius: 10px;
+        
+        &:hover {
+            background-color: $light_gray;
+        }
+    }
+
+    span {
+        display: block;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+        padding-left: 30px;
+        margin-left: 50px;
+        margin-bottom: 30px;
+    }
+
+    .skype {
+        background: url(../img/skype_icon.png) no-repeat;
+    }
+
+    .icq {
+        background: url(../img/skype_icon.png) no-repeat;
+    }
+
+    .mail {
+        background: url(../img/skype_icon.png) no-repeat;
+    }
+
+    .tel {
+        background: url(../img/skype_icon.png) no-repeat;
+    }
+
+    .social {
+        background: url(../img/social_buttons.png);
+        width: 240px;
+        height: 42px;
+        margin-left: 50px;
+    }
+
+    .copy {
+        display: block;
+        background-color: $light_gray;
+        width: 100%;
+        margin: 0px;
+        margin-top: 30px;
+        padding: 0px;
+        font-family: Arial;
+        color: #445162;
+        font-size: 0.75em;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        line-height: 2;
+        text-align: center;
+    }
+
+
+}
