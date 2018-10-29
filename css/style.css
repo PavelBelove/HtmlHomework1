@@ -272,6 +272,13 @@ header .header_img {
   font-weight: 700;
   line-height: 1;
 }
+.buy a:hover {
+  background-color: whitesmoke;
+  box-shadow: 4px 4px 0 grey;
+}
+.buy a:active {
+  box-shadow: 2px 2px 0 grey;
+}
 
 footer {
   background-color: #425062;
@@ -324,6 +331,10 @@ footer .btn {
 }
 footer .btn:hover {
   background-color: whitesmoke;
+  box-shadow: 4px 4px 0 grey;
+}
+footer .btn:active {
+  box-shadow: 2px 2px 0 grey;
 }
 footer span {
   display: block;

@@ -23,6 +23,21 @@ $light_gray: rgb(245, 245, 245);
     text-align: left;
 }
 
+@mixin btn_action() {
+    &:hover {
+        background-color: $light_gray;
+        
+        box-shadow: 4px 4px 0 grey;
+        
+    }
+    
+    &:active {
+        box-shadow: 2px 2px 0 grey;
+    }
+
+
+}
+
 .container {
     max-width: $container_width;
     margin: 0 auto;
@@ -316,6 +331,8 @@ header {
         font-size: 1.125em;
         font-weight: 700;
         line-height: 1;
+        
+        @include btn_action()
 
     }
 }
@@ -370,9 +387,9 @@ footer {
         margin-left: 190px;
         border-radius: 10px;
         
-        &:hover {
-            background-color: $light_gray;
-        }
+        @include btn_action();
+
+
     }
 
     span {
